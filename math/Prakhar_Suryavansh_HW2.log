@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.9.2)  2 OCT 2024 20:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2024.9.2)  6 OCT 2024 04:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -217,20 +217,20 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (/home/ps41/ws/TAMU/CSCE633_ML/Assignment_2/math/Prakhar_Suryavansh_HW2.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] (/home/ps41/ws/TAMU/CSCE633_ML/Assignment_2/math/Prakhar_Suryavansh_HW2.aux) ) 
 Here is how much of TeX's memory you used:
- 2698 strings out of 481239
- 37349 string characters out of 5920378
- 281589 words of memory out of 5000000
- 17959 multiletter control sequences out of 15000+600000
- 538941 words of font info for 50 fonts, out of 8000000 for 9000
+ 2720 strings out of 481239
+ 37585 string characters out of 5920378
+ 288589 words of memory out of 5000000
+ 17974 multiletter control sequences out of 15000+600000
+ 542348 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  30i,6n,34p,287b,192s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on /home/ps41/ws/TAMU/CSCE633_ML/Assignment_2/math/Prakhar_Suryavansh_HW2.pdf (1 page, 31794 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on /home/ps41/ws/TAMU/CSCE633_ML/Assignment_2/math/Prakhar_Suryavansh_HW2.pdf (4 pages, 107107 bytes).
 PDF statistics:
- 20 PDF objects out of 1000 (max. 8388607)
- 13 compressed objects within 1 object stream
+ 57 PDF objects out of 1000 (max. 8388607)
+ 40 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
