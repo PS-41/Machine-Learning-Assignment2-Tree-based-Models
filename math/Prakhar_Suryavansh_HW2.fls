@@ -103,6 +103,10 @@ INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /home/ps41/ws/TAMU/CSCE633_ML/Assignment_2/math/tree_image.jpeg
 INPUT /home/ps41/ws/TAMU/CSCE633_ML/Assignment_2/math/tree_image.jpeg
 INPUT /home/ps41/ws/TAMU/CSCE633_ML/Assignment_2/math/tree_image.jpeg
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
+INPUT /home/ps41/ws/TAMU/CSCE633_ML/Assignment_2/math/tree_image.jpeg
+INPUT /home/ps41/ws/TAMU/CSCE633_ML/Assignment_2/math/tree_image.jpeg
 INPUT /home/ps41/ws/TAMU/CSCE633_ML/Assignment_2/math/Prakhar_Suryavansh_HW2.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb

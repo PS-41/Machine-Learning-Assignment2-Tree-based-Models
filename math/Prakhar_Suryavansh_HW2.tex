@@ -93,7 +93,8 @@ Therefore, we have:
 \[
   Entropy(S) = 1.585 \text{ bits}
 \]
-
+\newline
+\textbf{Calculating the Entropy of $Y$ given $X_1$}\\\\
 \textbf{Calculating the Entropy when $X_1$ = 0: $Entropy(S_{X_1=0})$}
 
 For $X_1$ = 0, we have the following distribution for Y:
@@ -122,7 +123,7 @@ Simplifying, we get
 \[
   Entropy(S_{X_1=0}) = 1 \text{ bits}
 \]
-
+\newline
 \textbf{Calculating the Entropy when $X_1$ = 1: $Entropy(S_{X_1=1})$}
 
 For $X_1$ = 1, we have the following distribution for Y:
@@ -175,7 +176,7 @@ Therefore, we have gain for $X_1$ = $1.585 - 0.334 - 1$ = $0.251$ bits \\[1em]
 
 \textbf{Calculating the Entropy of $Y$ given $X_2$.}
 
-When $X_2 = 1$, we have:
+\textbf{When $X_2 = 1$, we have:}
 
 \[
   \begin{array}{|c|c|c|}
@@ -205,7 +206,7 @@ Thus, the entropy is:
   H(Y|X_2 = 1) = 0.918 \text{ bits}
 \]
 
-When $X_2 = 0$, we have:
+\textbf{When $X_2 = 0$, we have:}
 
 \[
   \begin{array}{|c|c|c|}
@@ -252,9 +253,10 @@ The information gain is given by:
 \]
 
 \subsection*{\underline{Part (2)}:}
-$IG(X_1) = 0.251$\\
-$IG(X_2) = 0.667$\\\\
-Since $IG(X_2) > IG(X_1)$, we use attribute $X_2$ for the first split in the decision tree.
+As calculated above,\\\\
+$IG(X_1) = 0.251$ bits\\
+$IG(X_2) = 0.667$ bits\\\\
+Since $IG(X_2) > IG(X_1)$, we use attribute $X_2$ for the first split in the decision tree, because feature with higher information gain is more informative.
 
 \begin{figure}[h!] % 'h!' ensures that LaTeX tries to place the image here, but can be modified with other options like 't' (top), 'b' (bottom), etc.
   \centering % Centers the image
@@ -268,14 +270,227 @@ Since $IG(X_2) > IG(X_1)$, we use attribute $X_2$ for the first split in the dec
 Conducting classification for the test example $X_1 = 0$ and $X_2 = 1$.\\
 Using our decision tree above, we see that we have to check $X_2$ at root node to decide which side to go.\\
 Since $X_2 = 1$, we go to the right side and reach the node which is leaf, where the prediction value is $Y = 1$ based on it's probability.\\
-So, for test example $X_1 = 0$ and $X_2 = 1$, we classify $Y = 1$.
+So, for test example $X_1 = 0$ and $X_2 = 1$, we classify \textbf{Y = 1}.
 
 \section*{\underline{Problem 2: Entropy}}
 
+We have the following data points:
+
+\[
+  \begin{array}{|c|c|c|}
+    \hline
+    X_1 & X_2 & Y \\
+    \hline
+    1   & 1   & 1 \\
+    1   & 1   & 1 \\
+    1   & 1   & 2 \\
+    1   & 0   & 3 \\
+    0   & 0   & 2 \\
+    0   & 0   & 3 \\
+    \hline
+  \end{array}
+\]
+
+\subsection*{\underline{Conditional Entropy Formula}}
+
+The conditional entropy \( H(Y|X) \) is defined as:
+
+\[
+  H(Y|X) = \sum_{x \in X} P(X = x) H(Y|X = x)
+\]
+
+Where \( H(Y|X = x) \) is the entropy of \( Y \) when \( X \) takes a particular value, and it is computed as:
+
+\[
+  H(Y|X = x) = - \sum_{y \in Y} P(Y = y | X = x) \log_2 P(Y = y | X = x)
+\]
+
 \subsection*{\underline{Part (1)}:}
+\textbf{Calculating the Entropy of $Y$ given $X_1$}
+
+\textbf{When $X_1 = 1$, we have:}
+
+\[
+  \begin{array}{|c|c|c|}
+    \hline
+    X_1 & X_2 & Y \\
+    \hline
+    1   & 1   & 1 \\
+    1   & 1   & 1 \\
+    1   & 1   & 2 \\
+    1   & 0   & 3 \\
+    \hline
+  \end{array}
+\]
+
+For \( X_1 = 1 \), the class distribution is:
+
+- Class 1: 2 instances
+
+- Class 2: 1 instance
+
+- Class 3: 1 instance
+
+The conditional entropy for \( Y \) given \( X_1 = 1 \) is computed as follows:
+
+\[
+  H(Y|X_1 = 1) = -\left( \frac{2}{4} \log_2 \frac{2}{4} + \frac{1}{4} \log_2 \frac{1}{4} + \frac{1}{4} \log_2 \frac{1}{4} \right)
+\]
+
+Substituting the values:
+
+\[
+  H(Y|X_1 = 1) = -\left( 0.5 \times (-1) + 0.25 \times (-2) + 0.25 \times (-2) \right)
+\]
+
+\[
+  H(Y|X_1 = 1) = -( -0.5 - 0.5 - 0.5 ) = 1.5 \, \text{bits}
+\]
+
+\textbf{When $X_1 = 0$, we have:}
+
+\[
+  \begin{array}{|c|c|c|}
+    \hline
+    X_1 & X_2 & Y \\
+    \hline
+    0   & 0   & 2 \\
+    0   & 0   & 3 \\
+    \hline
+  \end{array}
+\]
+
+For \( X_1 = 0 \), the class distribution is:
+
+- Class 2: 1 instance
+
+- Class 3: 1 instance
+
+The conditional entropy for \( Y \) given \( X_1 = 0 \) is:
+
+\[
+  H(Y|X_1 = 0) = -\left( \frac{1}{2} \log_2 \frac{1}{2} + \frac{1}{2} \log_2 \frac{1}{2} \right)
+\]
+
+Since \( \log_2(0.5) = -1 \):
+
+\[
+  H(Y|X_1 = 0) = -(0.5 \times (-1) + 0.5 \times (-1)) = 1 \, \text{bit}
+\]
+
+The overall conditional entropy of \( Y \) given \( X_1 \) is:
+
+\[
+  H(Y|X_1) = \frac{4}{6} H(Y|X_1 = 1) + \frac{2}{6} H(Y|X_1 = 0)
+\]
+
+Substituting the calculated values:
+
+\[
+  H(Y|X_1) = \frac{4}{6} \times 1.5 + \frac{2}{6} \times 1 = \textbf{1.33 \text{bits}}
+\]
+
+\textbf{Calculating the Entropy of $Y$ given $X_2$}
+
+\textbf{When $X_2 = 1$, we have:}
+
+\[
+  \begin{array}{|c|c|c|}
+    \hline
+    X_1 & X_2 & Y \\
+    \hline
+    1   & 1   & 1 \\
+    1   & 1   & 1 \\
+    1   & 1   & 2 \\
+    \hline
+  \end{array}
+\]
+
+For \( X_2 = 1 \), the class distribution is:
+
+- Class 1: 2 instances
+
+- Class 2: 1 instance
+
+The conditional entropy for \( Y \) given \( X_2 = 1 \) is:
+
+\[
+  H(Y|X_2 = 1) = -\left( \frac{2}{3} \log_2 \frac{2}{3} + \frac{1}{3} \log_2 \frac{1}{3} \right)
+\]
+
+Substituting the values:
+
+\[
+  H(Y|X_2 = 1) = -\left( 0.666 \times (-0.585) + 0.333 \times (-1.585) \right)
+\]
+
+\[
+  H(Y|X_2 = 1) = -( -0.390 + -0.528 ) = 0.918 \, \text{bits}
+\]
+
+\textbf{When $X_2 = 0$, we have:}
+
+\[
+  \begin{array}{|c|c|c|}
+    \hline
+    X_1 & X_2 & Y \\
+    \hline
+    1   & 0   & 3 \\
+    0   & 0   & 2 \\
+    0   & 0   & 3 \\
+    \hline
+  \end{array}
+\]
+
+For \( X_2 = 0 \), the class distribution is:
+
+- Class 2: 1 instance
+
+- Class 3: 2 instances
+
+The conditional entropy for \( Y \) given \( X_2 = 0 \) is:
+
+\[
+  H(Y|X_2 = 0) = -\left( \frac{1}{3} \log_2 \frac{1}{3} + \frac{2}{3} \log_2 \frac{2}{3} \right)
+\]
+
+Substituting the values:
+
+\[
+  H(Y|X_2 = 0) = -\left( 0.333 \times (-1.585) + 0.666 \times (-0.585) \right)
+\]
+
+\[
+  H(Y|X_2 = 0) = -( -0.528 - 0.390 ) = 0.918 \, \text{bits}
+\]
+
+The overall conditional entropy of \( Y \) given \( X_2 \) is:
+
+\[
+  H(Y|X_2) = \frac{3}{6} H(Y|X_2 = 1) + \frac{3}{6} H(Y|X_2 = 0)
+\]
+
+\[
+  H(Y|X_2) = \frac{1}{2}(0.918) + \frac{1}{2}(0.918) = \textbf{0.918 \text{bits}}
+\]
 
 \subsection*{\underline{Part (2)}:}
+\textbf{Choosing the Attribute for the First Split:}
+
+Since \( H(Y|X_2) = 0.918 \, \text{bits} \) and \( H(Y|X_1) = 1.33 \, \text{bits} \), the attribute $X_2$ should be used for the first split because it results in the lower conditional entropy. Entropy is a measure of disorder or uncertainty so we choose the feature that results in a lower entropy on splitting.
+
+\begin{figure}[h!] % 'h!' ensures that LaTeX tries to place the image here, but can be modified with other options like 't' (top), 'b' (bottom), etc.
+  \centering % Centers the image
+  \includegraphics[width=\textwidth]{tree_image.jpeg} % Adjust 'width' based on your requirements
+  \caption{Decision tree using X2 for splitting at root} % Adds a caption below the image
+  \label{fig:your_label_2} % Label for referencing the image later
+\end{figure}
 
 \subsection*{\underline{Part (3)}:}
+\textbf{Classification for the Test Example $X_1 = 0$ and $X_2 = 1$:}
+
+The root of the decision tree splits on $X_2$. If $X_2 = 1$, $Y$ can be either class 1 or class 2. If $X_2 = 0$, $Y$ can be either class 2 or class 3.
+
+For the test example where $X_1 = 0$ and $X_2 = 1$, the majority class for $X_2 = 1$ is class 1 as we can see from our decision tree above. Therefore, the predicted class for the test example is: \(\boxed{Y = 1}\)
 
 \end{document}
